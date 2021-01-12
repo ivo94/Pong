@@ -261,7 +261,6 @@ function love.update(dt)
 	--the paddle will only move if the ball is coming at it
 	--and if the ball has gone past the middle of the screen
 	--a new variable, 'ballDirection' has been added to achieve this
-	distance = math.abs(player2.x - ball.x)
 	if (ballDirection == 'serving' or ballDirection == 'right') then
 		if ball.x > VIRTUAL_WIDTH / 2 then
 			if (player2.y + 10) > ball.y then
@@ -368,7 +367,7 @@ function love.draw()
     ball:render()
 
     -- display FPS for debugging; simply comment out to remove
-    displayFPS()
+    --displayFPS()
 
     -- end our drawing to push
     push:apply('end')
